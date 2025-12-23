@@ -3,9 +3,9 @@ var cadena = "";
 do {
   var texto = prompt('Escriba algo.');
   if(cadena == ""){
-    cadena = texto + cadena;
+    cadena = texto;
   }else{
-    cadena = texto + "-" + cadena;
+    cadena = cadena + "-" +  texto;
   }
 } while (confirm('Desea continuar?'));
-contenedor.textContent = "Textos Recuperados: " + cadena;
+contenedor.innerHTML = "Textos Recuperados: " + cadena.bold();

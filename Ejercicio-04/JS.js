@@ -1,11 +1,16 @@
 const contenedor = document.getElementById("texto");
-var cadena = "";
-/*do {
-  var texto = prompt('Escriba algo.');
-  if(cadena == ""){
-    cadena = texto + cadena;
+var sumaTotal = 0;
+do {
+  var numero = prompt('Escriba un numero.');
+  var num = Number(numero);
+  if(isNaN(num)){
+    alert('Esté no es un numero o has colocado alguna letra');
   }else{
-    cadena = texto + "-" + cadena;
+    if(num.length === 0){
+      sumaTotal = num;
+    }else{
+      sumaTotal += num;
+    }
   }
-} while (confirm('Desea continuar?'));*/
-contenedor.textContent = "Textos Recuperados: " + cadena;
+} while (confirm('Desea continuar?'));
+contenedor.innerHTML = "Suma total: ".bold() + sumaTotal;

@@ -1,0 +1,81 @@
+body{
+  height: 90vh;
+  background-color: #fdfdfc;
+  margin-bottom: 50px;
+}
+
+.caja-animada{
+  width: 100px;
+  height: 100px;
+  border: 2px black solid;
+  border-radius: 5px;
+  margin: 10px;
+  position: relative;
+  /* Nombre de la animación que definimos */
+  animation-name: arco-color; 
+  /* Duración total de la animación */
+  animation-duration: 4s; 
+  /* Cuántas veces se repite (infinite = sin fin) */
+  animation-iteration-count: infinite; 
+  /* Cómo avanza la animación (ease-in-out para un movimiento suave) */
+  animation-timing-function: ease-in-out; 
+  /* Alterna la dirección en cada ciclo */
+  animation-direction: alternate; 
+}
+
+@keyframes arco-color {
+  0%{
+    background-color: darkorchid;
+    left: 0;
+    top: 0;
+  }
+  50%{
+    background-color: teal;
+    left: 50px; /* Se mueve 200px a la derecha */
+    top: 0px; /* Se mueve 50px hacia arriba (el pico del arco) */
+  }
+  100%{
+    background-color: crimson;
+    left: 125px;
+    top: 0px;
+  }
+}
+
+.solucion{
+  animation: solucion 5s infinite ease-in-out;
+  width: 100%;
+}
+
+@keyframes solucion{
+  0%{
+    color: indianred;
+  }
+  50%{
+    color: dodgerblue;
+  }
+  75%{
+    color: greenyellow;
+  }
+  100%{
+    color: red;
+  }
+}
+
+.center{
+  text-align: center;
+}
+
+.texto{
+  text-align: center;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
