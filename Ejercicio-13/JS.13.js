@@ -2,8 +2,8 @@
 var contenedor = "";
 let max = 99;
 
-let rand1 = Math.floor(Math.random() * max);
-let rand2 = Math.floor(Math.random() * max);
+let rand1 = Math.floor((Math.random() * max) + 1);
+let rand2 = Math.floor((Math.random() * max) + 1);
 let rand3 = Math.floor((Math.random() * max)+1);
 
 contenedor += `${rand1} ${rand2} ${rand3}`;
