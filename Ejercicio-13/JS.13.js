@@ -1,12 +1,15 @@
-//Math.floor(Math.random() * (max - min + 1)) + min
+//Math.floor((Math.random() * max) + min)
+
 var contenedor = "";
 let max = 99;
+let i = 1;
+do{
+        let rand = Math.floor((Math.random() * max) + 1);
+        i++;
+        contenedor += `${rand}<br>`;
+}while (i<=3);
 
-let rand1 = Math.floor((Math.random() * max) + 1);
-let rand2 = Math.floor((Math.random() * max) + 1);
-let rand3 = Math.floor((Math.random() * max)+1);
 
-contenedor += `${rand1} ${rand2} ${rand3}`;
 
 document.getElementById("texto").innerHTML = contenedor; 
 
